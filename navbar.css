@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0f2be;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #B8FFB8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.navbar .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 63px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    cursor: pointer;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.nav-menu li:hover {
+    color: #1b5e20;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    display: none; /* Hidden by default */
+    z-index: 1001;
+}
+
+.login-btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #1b5e20;
+}
+
+.nav-menu a {
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #c5e1a5;
+        height: 100%;
+        width: 250px;
+        text-align: center;
+        padding-top: 60px;
+        transition: right 0.3s ease-in-out;
+        gap: 30px;
+        z-index: 999;
+    }
+
+    .nav-menu.show {
+        right: 0;
+    }
+}
+
+@media (max-width: 493px) {
+    .nav-menu {
+        width: 55%;
+    }
+}
