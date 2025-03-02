@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
           showPopup("✅ Sign-in successful!");
 
           setTimeout(() => {
-            window.location.href = 'index.html'; // Redirect
+            window.location.href = 'landing.html'; // Redirect
           }, 1000);
         } else {
           showPopup(`⚠️ ${data.message}`);
@@ -117,6 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const token = urlParams.get("token");
     if (token) {
       localStorage.setItem("token", token);
-      window.location.href = "index.html"; // Redirect to main page
+      window.location.href = "landing.html"; // Redirect to main page
     }
   });

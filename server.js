@@ -198,7 +198,7 @@ app.get("/auth/google/callback",
                 JWT_SECRET,
                 { expiresIn: "1h" }
             );
-            res.redirect(`/index.html?token=${token}`);
+            res.redirect(`/landing.html?token=${token}`);
         } catch (error) {
             console.error("❌ Error generating JWT for Google user:", error);
             res.redirect("/");
